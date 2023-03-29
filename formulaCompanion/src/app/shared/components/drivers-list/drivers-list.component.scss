@@ -21,3 +21,24 @@ p-chip {
     max-height: 78vh;
     overflow-y: scroll;
 }
+
+.driver-row {
+    background-color: #2b2d34;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.float-end  {
+    position: absolute;
+    right: 1rem;
+    width: auto;
+}
+
+.tag {
+    font-size: 15px;
+    color: transparent;
+    background-color: white;
+    height: 25px !important;
+    border-radius: 2px;
+    width: 5px!important;
+}

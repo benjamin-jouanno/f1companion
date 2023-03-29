@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { FormulaApiService } from 'src/app/services/formula-api.service';
 import { COUNTRIES } from 'src/app/utils/ctryEnum';
@@ -15,7 +16,7 @@ export class ConstructorDetailComponent implements OnInit{
 
   infos$: Observable<any> = new Observable();
 
-  constructor(private formulaApiService:FormulaApiService) {}
+  constructor(private formulaApiService:FormulaApiService, private router: Router) {}
 
   ngOnInit(): void {
     this.infos$ = this.formulaApiService.getConstructorInfos(this.item?.constructorId);
@@ -34,5 +35,9 @@ export class ConstructorDetailComponent implements OnInit{
     const valueofCtry = Object.values(TEAM_COLOR)[indexOfCtry];
     return valueofCtry
   }
+
+goToDriver(driver: string) {
+  this.router.navigateByUrl('/Driver/' + driver);
+}
 
 }

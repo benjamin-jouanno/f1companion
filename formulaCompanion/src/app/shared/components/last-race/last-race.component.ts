@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { FormulaApiService } from 'src/app/services/formula-api.service';
@@ -8,7 +8,8 @@ import { TEAM_COLOR } from 'src/app/utils/teamColorEnum';
 @Component({
   selector: 'app-last-race',
   templateUrl: './last-race.component.html',
-  styleUrls: ['./last-race.component.scss']
+  styleUrls: ['./last-race.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class LastRaceComponent implements OnInit {
 

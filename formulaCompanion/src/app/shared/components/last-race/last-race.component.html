@@ -1,5 +1,5 @@
-<div>
-    <div style="position: relative;" class="custom-panel px-4">
+<div class="h-100">
+    <div style="position: relative;" class="custom-panel px-4 h-100">
         <div *ngIf="lastRaceResult$ | async as result else loading">
             <div class="header row">
                 <div class="col-2">
@@ -87,7 +87,7 @@
                 <div style="position: relative;" *ngFor="let result of result.MRData.RaceTable.Races[0].Results;"
                     class="d-flex row flex-row pb-3 align-items-center">
                     <div class=" col-5 driver-row py-2 d-flex flex-row" style="position: relative;">
-                        <span class="tag" style="background-color: {{ getColor(result.Constructor.constructorId) }}">I</span>
+                        <span class="tag" style="background-color: {{ getColor(result.Constructor.constructorId) }}; cursor: pointer;" pTooltip="{{result.Constructor.name}}" tooltipPosition="top">I</span>
                         <span class="mx-4">{{ result.Driver.givenName }} {{ result.Driver.familyName }}</span>
                         <span class="float-right">P{{ result.position }}</span>
                     </div>

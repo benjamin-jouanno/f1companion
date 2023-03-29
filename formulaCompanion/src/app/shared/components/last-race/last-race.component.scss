@@ -61,12 +61,12 @@
     background-color: grey;
 }
 
-:host ::ng-deep .p-chip{
+:host ::ng-deep .p-chip {
     background-color: #565962 !important;
     color: white;
 }
 
-:host ::ng-deep .p-chip.red_bull{
+:host ::ng-deep .p-chip.red_bull {
     background-color: #0600EF !important;
     color: white;
 }
@@ -75,47 +75,47 @@
     background-color: #A700FF !important;
 }
 
-:host ::ng-deep .p-chip.mercedes{
+:host ::ng-deep .p-chip.mercedes {
     background-color: #00D2BE !important;
     color: white;
 }
 
-:host ::ng-deep .p-chip.ferrari{
+:host ::ng-deep .p-chip.ferrari {
     background-color: #DC0000 !important;
     color: white;
 }
 
-:host ::ng-deep .p-chip.alpine{
+:host ::ng-deep .p-chip.alpine {
     background-color: #0090FF !important;
     color: white;
 }
 
-:host ::ng-deep .p-chip.haas{
+:host ::ng-deep .p-chip.haas {
     background-color: #B6BABD !important;
     color: white;
 }
 
-:host ::ng-deep .p-chip.aston_martin{
+:host ::ng-deep .p-chip.aston_martin {
     background-color: #006F62 !important;
     color: white;
 }
 
-:host ::ng-deep .p-chip.alphatauri{
+:host ::ng-deep .p-chip.alphatauri {
     background-color: #2B4562 !important;
     color: white;
 }
 
-:host ::ng-deep .p-chip.mclaren{
+:host ::ng-deep .p-chip.mclaren {
     background-color: #c26215 !important;
     color: white;
 }
 
-:host ::ng-deep .p-chip.alfa{
+:host ::ng-deep .p-chip.alfa {
     background-color: #900000 !important;
     color: white;
 }
 
-:host ::ng-deep .p-chip.williams{
+:host ::ng-deep .p-chip.williams {
     background-color: #005AFF !important;
     color: white;
 }
@@ -126,7 +126,7 @@
 }
 
 
-:host ::ng-deep .p-chip img  {
+:host ::ng-deep .p-chip img {
     border-radius: 0px !important;
 }
 
@@ -141,12 +141,12 @@
 }
 
 .yellow {
-    font-size:x-large;
+    font-size: x-large;
     color: #F8D500;
 }
 
 .raced {
-    font-size:x-large;
+    font-size: x-large;
     color: #565962;
 }
 
@@ -170,17 +170,18 @@
 .tbaled {
     margin-top: 10px !important;
     overflow-y: scroll;
-    max-height:44.5vh;
+    max-height: 44.5vh;
 }
 
-  .p-chip {
+.p-chip {
     cursor: pointer;
-  }
+}
 
-  .driver-row {
+.driver-row {
     background-color: #20222a;
     border-radius: 5px;
 }
+
 .tag {
     font-size: 1px;
     color: transparent;
@@ -200,7 +201,7 @@
     border-radius: 5px;
 }
 
-.float-end  {
+.float-end {
     position: absolute;
     right: 0;
     width: auto;

@@ -13,7 +13,7 @@ import { COUNTRIES } from 'src/app/utils/ctryEnum';
 })
 export class DriversListComponent implements OnInit {
   flags = COUNTRIES;
-
+  numbers = Array(5).fill(0);
   driverList$: Observable<any> = new Observable();
 
   @Input() currRace: string = '2023';

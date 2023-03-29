@@ -25,6 +25,7 @@ import { ConstructorItemComponent } from './shared/components/constructor-item/c
 import { DialogModule } from 'primeng/dialog';
 import { ConstructorDetailComponent } from './shared/components/constructor-detail/constructor-detail.component';
 import { SkeletonModule } from 'primeng/skeleton';
+import {TooltipModule} from 'primeng/tooltip';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { SkeletonModule } from 'primeng/skeleton';
     DropdownModule,
     FormsModule,
     DialogModule,
-    SkeletonModule
+    SkeletonModule,
+    TooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
