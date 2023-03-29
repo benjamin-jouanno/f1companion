@@ -1,0 +1,32 @@
+.separated {
+    border-right: 1px solid #565962;
+}
+
+.drivers {
+    min-height: 5rem;
+    max-height: 15rem;
+    overflow-y: scroll;
+}
+
+.green {
+    color: #44D745;
+}
+
+.driver-row {
+    background-color: #20222a;
+    border-radius: 5px;
+}
+.tag {
+    font-size: 1px;
+    color: transparent;
+    background-color: white;
+    height: 25px;
+    border-radius: 2px;
+    width: 5px;
+}
+
+.float-right {
+    position: absolute;
+    right: 0px;
+    top: 20%;
+}

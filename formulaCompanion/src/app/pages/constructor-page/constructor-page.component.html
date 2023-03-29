@@ -1,0 +1,12 @@
+<div class="h-100 w-100 page">
+    <div class="header w-100">
+        <app-header-bar></app-header-bar>
+    </div>
+    <div class="px-4" *ngIf="constructors$ | async as constructors">
+        <div class="row mt-4 pb-4">
+            <div class="col-3" *ngFor="let constructor of constructors.MRData.ConstructorTable.Constructors">
+                 <app-constructor-item [item]="constructor"></app-constructor-item>
+            </div>
+        </div>
+    </div>
+</div>

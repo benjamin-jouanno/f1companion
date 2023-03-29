@@ -1,0 +1,16 @@
+<div *ngIf="item" class="row d-flex flex-row my-4 py-4 item-row" style="border-color: {{ getColor(item.constructorId) }}" (click)="showDialog()">
+    <div class="d-flex col-2">
+        <span class="team-logo mx-3 py-4">
+            <img class="fi py-2 px-2"
+                src="../../../../assets/teams/{{item.constructorId}}.png"
+                appImgFallback="../../../../assets/teams/fia.png">
+        </span>
+    </div>
+    <div class="d-flex col-10 justify-content-start align-middle" style="z-index: 2;">
+        <h5>{{ item.name }} </h5>
+    </div>
+    
+</div>
+<p-dialog header="{{item.name}}" [(visible)]="visible"  [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+    <app-constructor-detail *ngIf="visible" [item]="item"></app-constructor-detail>
+</p-dialog>

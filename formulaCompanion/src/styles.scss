@@ -1,0 +1,190 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "/node_modules/flag-icons/css/flag-icons.min.css";
+
+@font-face {
+    font-family: "f1font";
+    src: local("f1font"), url(./assets/fonts/Formula1-Regular.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "f1fontHeader";
+    src: local("f1fontHeader"), url(./assets/fonts/Formula1-Bold.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "f1fontWide";
+    src: local("f1fontWide"), url(./assets/fonts/Formula1-Wide.otf) format("truetype");
+}
+
+html {
+    background-color: color(srgb 0.2053 0.2282 0.2552);
+}
+
+body {
+    background-color: color(srgb 0.2053 0.2282 0.2552);
+}
+
+h1,
+h2 {
+    font-family: f1fontHeader;
+    color: #fcfcfd;
+}
+
+h3,
+h4 {
+    font-family: f1fontHeader;
+    color: #fcfcfd;
+}
+
+span,
+div,
+a,
+button {
+    font-family: f1font;
+    color: #fcfcfd;
+}
+
+body {
+    font-family: "f1font" !important;
+    color: #fcfcfd;
+}
+
+.custom-panel {
+    background-color: #20222a;
+    padding: 1rem;
+    border-radius: 25px;
+}
+
+.row {
+    margin-left: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.p-autocomplete {
+    width: 100% !important;
+}
+.p-autocomplete-input {
+    width: 100% !important;
+    height: 2rem;
+    margin-top: 1rem;
+    font-family: "f1font" !important;
+    color: #fcfcfd;
+    background-color: color(srgb 0.2053 0.2282 0.2552);
+    border: none;
+}
+
+.p-autocomplete-loader {
+    margin-top: 0.1rem !important;
+}
+
+.p-inputtext:enabled:focus {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.p-autocomplete-multiple {
+    width: 98% !important;
+}
+.p-autocomplete {
+    width: 98% !important;
+}
+.p-autocomplete-multiple-container {
+    width: 100% !important;
+}
+
+.p-dropdown {
+    height: 2rem;
+    margin-top: 1rem;
+    background-color: color(srgb 0.2053 0.2282 0.2552);
+    border: none;
+}
+
+.p-focus {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.p-dropdown-label {
+    font-family: "f1font" !important;
+    color: #fcfcfd !important;
+    margin-top: -.5rem;
+}
+
+.p-dropdown-trigger{
+    display: none !important;
+  }
+
+.p-dropdown-items-wrapper {
+    background-color: color(srgb 0.2053 0.2282 0.2552);
+}
+
+.p-dropdown-items-wrapper::-webkit-scrollbar {
+    display: none !important;
+  }
+
+.p-highlight {
+    background-color: transparent !important;
+    color: #F8D500 !important;
+}
+
+.p-dropdown-item:hover{
+    color: #e10600;
+    background-color: transparent !important;
+}
+
+.p-autocomplete-items {
+    background-color: color(srgb 0.2053 0.2282 0.2552);
+}
+
+.p-autocomplete-panel {
+    background-color: color(srgb 0.2053 0.2282 0.2552);
+}
+
+.p-autocomplete-item:hover {
+    background: #20222a !important;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #aaaaaa transparent;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    margin-right: 5px;
+    background-color: #aaaaaa;
+    border-radius: 10px;
+    border: 1px solid transparent;
+  }
+
+  .p-dialog {
+    background-color: color(srgb 0.2053 0.2282 0.2552);
+    color: #fcfcfd;
+  }
+
+  .p-dialog-header {
+    background-color: #20222a !important;
+  }
+
+  .p-dialog-content {
+    background-color: transparent !important;
+  }
+
+  .p-dialog-header-icon:enabled:hover {
+    background: #e10600 !important;
+  }
+
+  .p-skeleton {
+    background-color: #565962;
+  }

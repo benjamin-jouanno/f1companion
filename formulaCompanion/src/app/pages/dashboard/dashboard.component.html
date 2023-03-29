@@ -1,0 +1,15 @@
+<div class="h-100 w-100 page">
+    <div class="header w-100">
+        <app-header-bar (seasonChange)="seasonChanged($event)"></app-header-bar>
+    </div>
+    <div class="h-100 w-100 px-4 py-4 mt-5 page">
+        <div class="row w-100 d-flex flex-fill">
+            <div class="col-6 d-flex maxed">
+                <app-drivers-list [currRace]="currentSeason"></app-drivers-list>
+            </div>
+            <div class="col-6 d-flex">
+                <app-last-race [currRace]="currentSeason"></app-last-race>
+            </div>
+        </div>
+    </div>
+</div>

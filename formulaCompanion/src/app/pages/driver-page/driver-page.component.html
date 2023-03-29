@@ -1,0 +1,78 @@
+<div class="h-100 w-100 page">
+    <div class="header w-100">
+        <app-header-bar></app-header-bar>
+    </div>
+    <div *ngIf="standings" class="row w-100 mt-4 px-3">
+        <div class="row">
+            <div class="col custom-panel pr-4" style="margin-right: 1rem !important;">
+                <div class="row  px-3 mb-2 separator">
+                    <h3>Driver standings</h3>
+                </div>
+                <div class="row mt-3 maxed">
+                    <div *ngFor="let season of standings" class="mb-3">
+                        <h5>Season {{ season.season }}:</h5>
+                        <div class="row">
+                            <div>
+                                <p-chip class="col-6"
+                                    styleClass="{{ season.DriverStandings[0].Constructors[0].constructorId }}"
+                                    label="{{season.DriverStandings[0].Constructors[0].name}}" styleClass="mr-2">
+                                    <span class="team-logo mx-3 ">
+                                        <img class="team-svg"
+                                            src="../../../../assets/teams/{{season.DriverStandings[0].Constructors[0].constructorId}}.png"
+                                            appImgFallback="../../../../assets/teams/fia.png">
+                                    </span>
+                                </p-chip>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <h6>Finished: {{ season.DriverStandings[0].positionText }}</h6>
+                            <h6>Scored: {{ season.DriverStandings[0].points }} points</h6>
+                            <h6>Has won: {{ season.DriverStandings[0].wins }} race(s)</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col pl-4 custom-panel">
+                <div class="row">
+                    <div class="col-6 separated h-100">
+                        <div *ngIf="driver" class="row d-flex flex-row separator">
+                            <div class="d-flex flex-row">
+                                <h3 class="">{{driver?.givenName + ' ' + driver?.familyName}}</h3>
+                                <div class="races" style="margin-left: 1rem;">
+                                    <span class="race-flag fi fi-{{getFlag(driver.nationality)}}"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row px-2 py-2">
+                            <div class="imgB {{ getLastConstructor() }}">
+                                <span class="driverNbr strokeme">{{ driver.permanentNumber }}</span>
+                                <img class="driverImg mt-2" src="../../../assets/driversCaards/{{driver.driverId}}.avif" appImgFallback="../../../../assets/teams/fia.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div *ngIf="driver" class="row d-flex flex-row separator">
+                            <div class="d-flex flex-row justify-content-center">
+                                <h3 class="">{{getLastConstructorName()}}</h3>
+                                <span class="team-logo mx-3 ">
+                                    <img class="team-svg"
+                                        src="../../../../assets/teams/{{getLastConstructor()}}.png"
+                                        appImgFallback="../../../../assets/teams/fia.png">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row mt-2 d-flex flex-row">
+                            <h5 class="d-flex"><span class="wins" [class.win]="getWT()">{{ getWT() }}</span>Championship win(s)</h5>
+                        </div>
+                        <div class="row mt-2 d-flex flex-row">
+                            <h5 class="d-flex"><span class="wins" [class.win]="getRaceWinned()">{{ getRaceWinned() }}</span>Race win(s)</h5>
+                        </div>
+                        <div class="row mt-2 d-flex flex-row">
+                            <h5 class="d-flex"><span class="wins">{{ getSeasonsRaced() }}</span>Seasons in F1</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

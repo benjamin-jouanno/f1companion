@@ -1,0 +1,13 @@
+.page {
+    background-color: color(srgb 0.2053 0.2282 0.2552);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+.maxed {
+    max-height: 90vh;
+}

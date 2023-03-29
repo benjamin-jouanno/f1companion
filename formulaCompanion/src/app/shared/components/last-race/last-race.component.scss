@@ -1,0 +1,207 @@
+.green {
+    color: #44D745;
+}
+
+.season-picker {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+}
+
+.font-italic {
+    color: #565962;
+}
+
+.expand {
+    color: #565962;
+    cursor: pointer;
+}
+
+.track-stat {
+    border-top: 1px solid #565962;
+}
+
+.centered {
+    text-align: center;
+}
+
+.spaced {
+    border-right: 1px solid #565962;
+}
+
+.listed {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #565962;
+}
+
+.disabled {
+    color: #565962;
+    cursor: default;
+}
+
+.ctas {
+    cursor: pointer;
+}
+
+.pi-ellipsis-h {
+    margin-left: -1rem;
+    padding-right: 1rem;
+}
+
+.titles {
+    margin-left: -2rem;
+}
+
+.race-flag {
+    font-size: 3.2rem;
+    border-radius: 8px;
+}
+
+.dnf {
+    background-color: grey;
+}
+
+:host ::ng-deep .p-chip{
+    background-color: #565962 !important;
+    color: white;
+}
+
+:host ::ng-deep .p-chip.red_bull{
+    background-color: #0600EF !important;
+    color: white;
+}
+
+:host ::ng-deep .p-tag.fastest {
+    background-color: #A700FF !important;
+}
+
+:host ::ng-deep .p-chip.mercedes{
+    background-color: #00D2BE !important;
+    color: white;
+}
+
+:host ::ng-deep .p-chip.ferrari{
+    background-color: #DC0000 !important;
+    color: white;
+}
+
+:host ::ng-deep .p-chip.alpine{
+    background-color: #0090FF !important;
+    color: white;
+}
+
+:host ::ng-deep .p-chip.haas{
+    background-color: #B6BABD !important;
+    color: white;
+}
+
+:host ::ng-deep .p-chip.aston_martin{
+    background-color: #006F62 !important;
+    color: white;
+}
+
+:host ::ng-deep .p-chip.alphatauri{
+    background-color: #2B4562 !important;
+    color: white;
+}
+
+:host ::ng-deep .p-chip.mclaren{
+    background-color: #c26215 !important;
+    color: white;
+}
+
+:host ::ng-deep .p-chip.alfa{
+    background-color: #900000 !important;
+    color: white;
+}
+
+:host ::ng-deep .p-chip.williams{
+    background-color: #005AFF !important;
+    color: white;
+}
+
+.team-svg {
+    max-height: 30px;
+    width: auto;
+}
+
+
+:host ::ng-deep .p-chip img  {
+    border-radius: 0px !important;
+}
+
+.divider {
+    border-right: 1px solid white;
+    color: transparent;
+    margin-right: .5rem;
+}
+
+.red {
+    color: #E93324;
+}
+
+.yellow {
+    font-size:x-large;
+    color: #F8D500;
+}
+
+.raced {
+    font-size:x-large;
+    color: #565962;
+}
+
+.purple {
+    color: #A700FF;
+    text-align: center;
+}
+
+.winner {
+    color: #44D745;
+}
+
+.pointer {
+    color: #F8D500;
+}
+
+.out {
+    color: #BE2C30;
+}
+
+.tbaled {
+    margin-top: 10px !important;
+    overflow-y: scroll;
+    max-height:44.5vh;
+}
+
+  .p-chip {
+    cursor: pointer;
+  }
+
+  .driver-row {
+    background-color: #20222a;
+    border-radius: 5px;
+}
+.tag {
+    font-size: 1px;
+    color: transparent;
+    background-color: white;
+    height: 25px;
+    border-radius: 2px;
+    width: 5px;
+}
+
+.float-right {
+    position: absolute;
+    right: 10px;
+}
+
+.driver-row {
+    background-color: #2b2d34;
+    border-radius: 5px;
+}
+
+.float-end  {
+    position: absolute;
+    right: 0;
+    width: auto;
+}

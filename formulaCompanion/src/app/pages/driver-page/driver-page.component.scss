@@ -1,0 +1,184 @@
+.page {
+    background-color: color(srgb 0.2053 0.2282 0.2552);
+    overflow-x: hidden;
+}
+
+.race-flag {
+    font-size: 1.7rem;
+    border-radius: 8px;
+}
+
+p-chip img {
+    border-radius: 0px !important;
+}
+
+.races {
+}
+
+.separator {
+    border-bottom: 1px solid #565962;
+}
+
+.team-svg {
+    max-height: 30px;
+    width: auto;
+}
+
+.red_bull {
+    background-color: #0600ef !important;
+    color: white;
+}
+
+.mercedes {
+    background-color: #00d2be !important;
+    color: white;
+}
+
+.ferrari {
+    background-color: #dc0000 !important;
+    color: white;
+}
+
+.alpine {
+    background-color: #0090ff !important;
+    color: white;
+}
+
+.haas {
+    background-color: #b6babd !important;
+    color: white;
+}
+
+.aston_martin {
+    background-color: #006f62 !important;
+    color: white;
+}
+
+.alphatauri {
+    background-color: #2b4562 !important;
+    color: white;
+}
+
+.mclaren {
+    background-color: #c26215 !important;
+    color: white;
+}
+
+.alfa {
+    background-color: #900000 !important;
+    color: white;
+}
+
+.williams {
+    background-color: #005aff !important;
+    color: white;
+}
+
+.maxed {
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+.separated {
+    padding-right: 1.5rem;
+    border-right: 1px solid #565962;
+}
+
+.imgB {
+    border-radius: 15px;
+    border: 2px rgba(255, 255, 255, .5) solid;
+    -webkit-box-shadow: inset 0 0 7px rgba(255, 255, 255, .5);
+    -moz-box-shadow: inset 0 0 7px rgba(255, 255, 255, .5);
+    box-shadow: inset 0 0 7px rgba(255, 255, 255, .5);
+    position: relative;
+    background-color: #565962;
+}
+
+.driverImg {
+    position: relative;
+    max-height: 206px;
+    max-width: auto;
+    z-index: 9999;
+}
+
+.driverNbr {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%,-50%);
+    font-size: 10.5rem;
+    font-style: italic;
+    z-index: 1;
+}
+
+.strokeme {
+    color: transparent;
+    opacity: 30%;
+    -webkit-text-stroke-width: 10px;
+    -webkit-text-stroke-color: white;
+  }
+
+
+  .red_bull{
+    background-color: #0600EF !important;
+    color: white;
+}
+
+:host ::ng-deep .p-tag.fastest {
+    background-color: #A700FF !important;
+}
+
+.mercedes{
+    background-color: #00D2BE !important;
+    color: white;
+}
+
+.ferrari{
+    background-color: #DC0000 !important;
+    color: white;
+}
+
+.alpine{
+    background-color: #0090FF !important;
+    color: white;
+}
+
+.haas{
+    background-color: #B6BABD !important;
+    color: white;
+}
+
+.aston_martin{
+    background-color: #006F62 !important;
+    color: white;
+}
+
+.alphatauri{
+    background-color: #2B4562 !important;
+    color: white;
+}
+
+.mclaren{
+    background-color: #c26215 !important;
+    color: white;
+}
+
+.alfa{
+    background-color: #900000 !important;
+    color: white;
+}
+
+.williams{
+    background-color: #005AFF !important;
+    color: white;
+}
+
+.wins{
+    margin-right: .5rem;
+    color: #F8D500;
+
+}
+
+.win {
+    color: #44D745 !important;
+}

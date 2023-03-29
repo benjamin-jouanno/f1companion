@@ -1,0 +1,30 @@
+.team-svg {
+    max-height: 30px;
+    width: auto;
+}
+
+.item-row {
+    cursor: pointer;
+    position: relative;
+    background-color: #20222a !important;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+img {
+    text-align: centers;
+    justify-content: center;
+    align-items: center;
+}
+
+.fi {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 90%;
+    width: auto;
+    z-index: 1;
+    background-size: cover;
+    opacity: 80%;
+    border-radius: 0px 10px 10px 0px;
+}

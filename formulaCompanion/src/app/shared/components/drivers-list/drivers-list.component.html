@@ -1,0 +1,22 @@
+<div>
+    <div class="custom-panel px-4">
+        <div class="row header mb-4 pb-4" *ngIf="driverList$ | async as drivers">
+            <h2>Drivers for {{drivers.MRData.DriverTable.season}}</h2>
+            <span class="accent">FIA F1 world championship</span>
+        </div>
+        <div class="row pt-4 maxed" *ngIf="driverList$ | async as drivers else loading">
+            <div class="d-flex flex-row pb-3 align-items-center row" *ngFor="let driver of drivers.MRData.DriverTable.Drivers">
+                <p-chip (click)="selected(driver.driverId)" class="col-8" label="{{driver.givenName}}  {{driver.familyName}}"
+                    icon="fi fi-{{ getFlag(driver.nationality) }}" styleClass="mr-2">
+                </p-chip>
+                <span class="mx-3 col-2"> n°{{driver.permanentNumber}} </span>
+            </div>
+        </div>
+        <ng-template #loading>
+            <div class="d-flex justify-content-center">
+                <p-progressSpinner [style]="{width: '50px', height: '50px'}" styleClass="custom-spinner" strokeWidth="8"
+                    fill="var(--surface-ground)" animationDuration=".5s"></p-progressSpinner>
+            </div>
+        </ng-template>
+    </div>
+</div>

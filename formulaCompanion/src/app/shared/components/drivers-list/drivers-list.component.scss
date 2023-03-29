@@ -1,0 +1,23 @@
+.accent {
+    color: #565962;
+    font-size: large; 
+}
+
+.header {
+    border-bottom: 1px solid #565962;
+}
+
+:host ::ng-deep .p-chip{
+    background-color: #565962 !important;
+    color: white;
+}
+
+p-chip {
+    cursor: pointer;
+}
+
+.maxed {
+    margin-top: 10px;
+    max-height: 78vh;
+    overflow-y: scroll;
+}

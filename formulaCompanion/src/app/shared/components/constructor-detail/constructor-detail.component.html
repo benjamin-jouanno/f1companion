@@ -1,0 +1,31 @@
+<div *ngIf="item" class="row d-flex mt-4">
+    <div class="col-6 separated">
+        <h5>{{ item.nationality }} team</h5>
+    </div>
+    <div class="col-6 d-flex justify-content-center">
+        <div class="row" *ngIf="infos$ |async as infos; else loading">
+            <div class="d-flex flex-row">
+                <h5 class="green p-2">{{ infos.MRData.DriverTable.Drivers.length }}</h5>
+                <h5 class="p-2">Drivers in {{ item.name }} history</h5>
+            </div>
+            <div class="row drivers">
+                <div class="driver-row my-2 py-2" *ngFor="let driver of infos.MRData.DriverTable.Drivers">
+                    <div class="d-flex flex-row" style="position: relative;">
+                        <span class="tag" style="background-color: {{ getColor(item.constructorId) }}">I</span>
+                        <span class="mx-4">{{ driver.givenName }} {{ driver.familyName }}</span>
+                        <span class=" float-right race-flag fi fi-{{getFlag(driver.nationality)}}"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ng-template #loading>
+            <div class="d-flex flex-column justify-content-start skeleton">
+            <p-skeleton width="15rem" height="2rem" styleClass="mb-3"></p-skeleton>
+            <p-skeleton width="10rem" styleClass="mb-3"></p-skeleton>
+            <p-skeleton width="10rem" styleClass="mb-3"></p-skeleton>
+            <p-skeleton width="10rem" styleClass="mb-3"></p-skeleton>
+            <p-skeleton width="10rem" styleClass="mb-3"></p-skeleton>
+        </div>
+        </ng-template>
+    </div>
+</div>

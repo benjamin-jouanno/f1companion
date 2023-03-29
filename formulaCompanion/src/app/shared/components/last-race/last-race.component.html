@@ -1,0 +1,125 @@
+<div>
+    <div style="position: relative;" class="custom-panel px-4">
+        <div *ngIf="lastRaceResult$ | async as result else loading">
+            <div class="header row">
+                <div class="col-2">
+                    <span
+                        class="race-flag fi fi-{{getFlag(result.MRData.RaceTable.Races[0].Circuit.Location.country)}}"></span>
+                </div>
+                <div class=" ml-4 col-8 titles flex-column">
+                    <h4>
+                        {{ result.MRData.RaceTable.Races[0].raceName }} {{ result.MRData.RaceTable.Races[0].season }}
+                    </h4>
+                    <h6 class="font-italic">
+                        {{ result.MRData.RaceTable.Races[0].Circuit.circuitName }} • {{
+                        result.MRData.RaceTable.Races[0].Circuit.Location.locality }} • {{
+                        result.MRData.RaceTable.Races[0].Circuit.Location.country }}
+                    </h6>
+                </div>
+            </div>
+            <div class="row track-data mt-4">
+                <div class="col-6 spaced">
+                    <div class="row">
+                        <h2>{{ getDate(result.MRData.RaceTable.Races[0].date) | date: 'MMMM dd, yyyy' }}</h2>
+                    </div>
+                    <div class="row">
+                        <h1>{{ getHour(result.MRData.RaceTable.Races[0].date, result.MRData.RaceTable.Races[0].time) |
+                            date: 'shortTime' }}</h1>
+                    </div>
+                </div>
+                <div class="col-6 centered">
+                    <div class="row mt-4">
+                        <span (click)="previousRound(result.MRData.RaceTable.Races[0].round)"
+                            [class.disabled]="result.MRData.RaceTable.Races[0].round === '1'"
+                            class="pi pi-arrow-left col-3 mt-3 ctas"></span>
+                        <h1 class="col-6">Round {{ result.MRData.RaceTable.Races[0].round }}</h1>
+                        <span (click)="nextRound(result.MRData.RaceTable.Races[0].round)"
+                            [class.disabled]="result.MRData.RaceTable.Races[0].round === getMaxRound()"
+                            class="pi pi-arrow-right ctas col-3 mt-3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row track-stat mt-4 pt-4 listed">
+                <div class="col-6 spaced">
+                    <div class="row">
+                        <h2 class="red">{{ result.MRData.RaceTable.Races[0].Results[0].laps }}<span class="">
+                                Laps</span></h2>
+                    </div>
+                    <div class="row">
+                        <h1>{{ getDuration(result.MRData.RaceTable.Races[0].Results[0].Time.millis) }} <span
+                                class="raced">raced</span></h1>
+                    </div>
+                    <div class="row d-flex">
+                        <h1><span class="raced">Average </span>{{
+                            result.MRData.RaceTable.Races[0].Results[0].FastestLap?.AverageSpeed.speed }}<span
+                                class="yellow"> Kmph</span></h1>
+                    </div>
+                </div>
+                <div class="col-6 centered">
+                    <div>
+                        <div class="row">
+                            <h1 class="purple">Fastest Lap</h1>
+                        </div>
+                        <div class="row px-2" *ngIf="result.MRData.RaceTable.Races[0].Results[0].FastestLap">
+                            <h3>
+                                {{ this.formulaApiService.getFastest().Driver.familyName }} •
+                                n°{{ this.formulaApiService.getFastest().Driver.permanentNumber
+                                }}
+                            </h3>
+                            <div class="row px-2">
+                                <h1>
+                                    <span
+                                        [class.out]="this.formulaApiService.getFastest().position > +'10'"
+                                        [class.winner]="this.formulaApiService.getFastest().position === +'1'"
+                                        [class.pointer]="this.formulaApiService.getFastest().position <= +'10' && this.formulaApiService.getFastest().position >1 +'10'">{{
+                                        this.formulaApiService.getFastest().position }}</span> /
+                                    <span class="raced">{{ result.MRData.RaceTable.Races[0].Results.length }}</span>
+                                </h1>
+                            </div>
+                            <div class="row">
+                                <span class="raced">Position</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row tbaled mt-3 pt-4">
+                <div style="position: relative;" *ngFor="let result of result.MRData.RaceTable.Races[0].Results;"
+                    class="d-flex row flex-row pb-3 align-items-center">
+                    <div class=" col-5 driver-row py-2 d-flex flex-row" style="position: relative;">
+                        <span class="tag" style="background-color: {{ getColor(result.Constructor.constructorId) }}">I</span>
+                        <span class="mx-4">{{ result.Driver.givenName }} {{ result.Driver.familyName }}</span>
+                        <span class="float-right">P{{ result.position }}</span>
+                    </div>
+                    <span class="col-2">Started: P{{ result.grid }}</span>
+                    <div class="col-4">
+                        <div class="d-flex row">
+                            <span class="col-6" [class.green]="result.points > 0 " *ngIf="result.points > 0">+{{
+                                result.points }}
+                                points</span>
+                            <p-tag class="col-6" *ngIf="result.FastestLap?.rank == '1'" styleClass="fastest"
+                                value="Fastest lap"></p-tag>
+                            <p-tag class="col-6" *ngIf="result.positionText == 'R'" severity="danger"
+                                value="Dnf"></p-tag>
+                        </div>
+                    </div>
+                    <div class="float-end">
+                        {{result.Time?.time}}
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="row centered mt-4">
+                <i (click)="expand()" *ngIf="maxDisplay === 6" class="pi pi-arrow-down expand"></i>
+                <i (click)="expand()" *ngIf="maxDisplay != 6" class="pi pi-arrow-up expand"></i>
+            </div>
+            -->
+        </div>
+        <ng-template #loading>
+            <div class="d-flex justify-content-center">
+                <p-progressSpinner [style]="{width: '50px', height: '50px'}" styleClass="custom-spinner" strokeWidth="8"
+                    fill="var(--surface-ground)" animationDuration=".5s"></p-progressSpinner>
+            </div>
+        </ng-template>
+    </div>
+</div>
