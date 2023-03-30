@@ -26,6 +26,7 @@ import { DialogModule } from 'primeng/dialog';
 import { ConstructorDetailComponent } from './shared/components/constructor-detail/constructor-detail.component';
 import { SkeletonModule } from 'primeng/skeleton';
 import {TooltipModule} from 'primeng/tooltip';
+import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {TooltipModule} from 'primeng/tooltip';
     DriverPageComponent,
     ConstructorPageComponent,
     ConstructorItemComponent,
-    ConstructorDetailComponent
+    ConstructorDetailComponent,
+    WelcomePageComponent
   ],
   imports: [
     BrowserModule,

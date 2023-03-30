@@ -51,7 +51,7 @@ export class HeaderBarComponent implements OnInit {
   }
 
   goHome() {
-    this.router.navigateByUrl('dashboard');
+    this.router.navigateByUrl('Dashboard');
   }
 
   getFlag(nationality: string): string {

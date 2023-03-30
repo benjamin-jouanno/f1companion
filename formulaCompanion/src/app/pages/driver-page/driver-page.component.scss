@@ -19,9 +19,15 @@ p-chip img {
     border-bottom: 1px solid #565962;
 }
 
+.season-item {
+    border-bottom: 1px solid #565962;
+    border-right: 1px solid #565962;
+}
+
 .team-svg {
     max-height: 30px;
     width: auto;
+
 }
 
 .red_bull {
@@ -77,6 +83,7 @@ p-chip img {
 .maxed {
     max-height: 70vh;
     overflow-y: scroll;
+    border-left: 1px solid #565962;
 }
 
 .separated {
@@ -181,4 +188,20 @@ p-chip img {
 
 .win {
     color: #44D745 !important;
+}
+
+.tag {
+    font-size: 15px;
+    color: transparent;
+    background-color: white;
+    height: 25px !important;
+    border-radius: 2px;
+    margin-left: .5rem;
+    width: 5px!important;
+}
+
+.driver-row {
+    background-color: #2b2d34;
+    border-radius: 5px;
+    cursor: pointer;
 }

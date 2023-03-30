@@ -14,7 +14,7 @@
 }
 
 .green {
-    color: #44D745;
+    color: #44d745;
 }
 
 .driver-row {
@@ -39,4 +39,19 @@
 .race-flag {
     font-size: 1.2rem;
     border-radius: 3px;
+}
+
+.car-img {
+    max-height: 10rem;
+    min-height: 140px !important;
+    width: auto;
+}
+
+.team-logo {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    max-width: 15rem;
+    height: auto;
+    text-align: center;
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FormulaApiService } from 'src/app/services/formula-api.service';
 import { COUNTRIES } from 'src/app/utils/ctryEnum';
+import { TEAM_COLOR } from 'src/app/utils/teamColorEnum';
 
 @Component({
   selector: 'app-driver-page',
@@ -63,5 +64,12 @@ export class DriverPageComponent implements OnInit {
   }
   getSeasonsRaced(): number {
     return this.standings?.length;
+  }
+
+  getColor(id: string) {
+    id = id.replace('-', '_');
+    const indexOfCtry = Object.keys(TEAM_COLOR).indexOf(id);
+    const valueofCtry = Object.values(TEAM_COLOR)[indexOfCtry];
+    return valueofCtry
   }
 }

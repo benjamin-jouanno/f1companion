@@ -8,20 +8,15 @@
                 <div class="row  px-3 mb-2 separator">
                     <h3>Driver standings</h3>
                 </div>
-                <div class="row mt-3 maxed">
-                    <div *ngFor="let season of standings" class="mb-3">
-                        <h5>Season {{ season.season }}:</h5>
+                <div class="row maxed">
+                    <div ngClass="col-4" *ngFor="let season of standings" class="pb-3 season-item">
+                        <h5 class="px-3 pt-4">Season {{ season.season }}:</h5>
                         <div class="row">
                             <div>
-                                <p-chip class="col-6"
-                                    styleClass="{{ season.DriverStandings[0].Constructors[0].constructorId }}"
-                                    label="{{season.DriverStandings[0].Constructors[0].name}}" styleClass="mr-2">
-                                    <span class="team-logo mx-3 ">
-                                        <img class="team-svg"
-                                            src="../../../../assets/teams/{{season.DriverStandings[0].Constructors[0].constructorId}}.png"
-                                            appImgFallback="../../../../assets/teams/fia.png">
-                                    </span>
-                                </p-chip>
+                                <div style="position: relative;"class="col-12 driver-row py-2">
+                                    <span class="tag" style="background-color: {{ getColor(season.DriverStandings[0].Constructors[0].constructorId) }};">I</span>
+                                    <span class="mx-4">{{season.DriverStandings[0].Constructors[0].name}}</span>
+                                </div>
                             </div>
                         </div>
                         <div class="row mt-3">
