@@ -113,6 +113,10 @@ export class LastRaceComponent implements OnInit {
 
   }
 
+  goToDriver(id: string) {
+    this.router.navigateByUrl('/Driver/' + id);
+  }
+
   expand() {
     if (this.maxDisplay === 6) {
       this.maxDisplay = 25;
