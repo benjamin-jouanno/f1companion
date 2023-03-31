@@ -10,8 +10,6 @@
             <ng-template let-driver pTemplate="item" class="item">
                 <span>{{driver.label}}</span>
                 <span class="spaced fi fi-{{ getFlag(driver.nationality) }}"></span>
-                <span class="spaced">-</span>
-                <span class="spaced">{{ driver.permanentNumner }}</span>
             </ng-template>
         </p-autoComplete>
         <span class="my-3  px-2 constru" routerLink="/Constructors">Constructors</span>

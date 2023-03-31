@@ -27,6 +27,9 @@ import { ConstructorDetailComponent } from './shared/components/constructor-deta
 import { SkeletonModule } from 'primeng/skeleton';
 import {TooltipModule} from 'primeng/tooltip';
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
+import { RacePageComponent } from './pages/race-page/race-page.component';
+import { DownPageComponent } from './pages/down-page/down-page.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,9 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
     ConstructorPageComponent,
     ConstructorItemComponent,
     ConstructorDetailComponent,
-    WelcomePageComponent
+    WelcomePageComponent,
+    RacePageComponent,
+    DownPageComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +61,8 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
     FormsModule,
     DialogModule,
     SkeletonModule,
-    TooltipModule
+    TooltipModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

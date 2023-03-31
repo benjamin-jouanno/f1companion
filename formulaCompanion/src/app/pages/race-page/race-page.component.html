@@ -1,0 +1,58 @@
+<div class="h-100 w-100 page" *ngIf="raceResult$ | async as race">
+    <div class="header w-100">
+        <app-header-bar></app-header-bar>
+    </div>
+    <div class="row custom-panel" style="margin-top:5rem;">
+        <div class="d-flex flex-row">
+            <div>
+                <span class="race-flag mx-2 fi fi-{{getFlag(race.MRData.RaceTable.Races[0].Circuit.Location.country)}}"
+                    style="border-radius: 8px;"></span>
+            </div>
+            <div class="title">
+                <h4>
+                    {{ race.MRData.RaceTable.Races[0].raceName }} {{ race.MRData.RaceTable.Races[0].season }}
+                </h4>
+                <h6 class="font-italic">
+                    {{ race.MRData.RaceTable.Races[0].Circuit.circuitName }} • {{
+                    race.MRData.RaceTable.Races[0].Circuit.Location.locality }} • {{
+                    race.MRData.RaceTable.Races[0].Circuit.Location.country }}
+                </h6>
+            </div>
+        </div>
+    </div>
+    <div class="row my-4 ">
+        <div class="custom-panel col-6" *ngIf="weather$ | async as weather">
+            <div class="row weather-title">
+                <div class="blur">
+                    <div class="px-2 py-2 row">
+                        <div class="col-5">
+                            <h2 class="bg-text">{{ getDate(race.MRData.RaceTable.Races[0].date) | date: 'MMMM dd, yyyy'
+                                }}
+                            </h2>
+                            <h2 class="bg-text">{{ getHour(race.MRData.RaceTable.Races[0].date,
+                                race.MRData.RaceTable.Races[0].time) |
+                                date: 'shortTime' }}</h2>
+                        </div>
+                        <div class="col-7">
+                            <div class="row">
+                            <div class="col-6">
+                                <div class="d-flex flex-row">
+                                    <fa-icon class="mx-3" [icon]="getOvercast()"></fa-icon>
+                                    <h1>{{ getRaceTemp() }} °C</h1>
+                                </div>
+                                <div class="mx-3">Elevation: {{ weather.elevation }}m</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex flex-row" *ngIf="rain > 0">
+                                    <fa-icon class="mx-3" [icon]="icons.faRain"></fa-icon>
+                                    <h1>{{ getRaceRain() }} mm</h1>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

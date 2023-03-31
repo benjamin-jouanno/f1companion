@@ -1,7 +1,7 @@
 <div class="h-100">
     <div style="position: relative;" class="custom-panel px-4 h-100">
         <div *ngIf="lastRaceResult$ | async as result else loading">
-            <div class="header row">
+            <div class="header row" style="position: relative;">
                 <div class="col-2">
                     <span
                         class="race-flag fi fi-{{getFlag(result.MRData.RaceTable.Races[0].Circuit.Location.country)}}"></span>
@@ -15,6 +15,9 @@
                         result.MRData.RaceTable.Races[0].Circuit.Location.locality }} • {{
                         result.MRData.RaceTable.Races[0].Circuit.Location.country }}
                     </h6>
+                </div>
+                <div class="details">
+                    <span (click)="raceDetails(currRace, result.MRData.RaceTable.Races[0].round)">Race details</span>
                 </div>
             </div>
             <div class="row track-data mt-4">

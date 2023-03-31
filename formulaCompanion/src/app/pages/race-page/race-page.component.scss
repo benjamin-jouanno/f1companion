@@ -1,0 +1,46 @@
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+.page {
+    overflow-x: hidden;
+}
+
+.custom-panel {
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+}
+
+.font-italic {
+    color: #565962;
+}
+
+.race-flag {
+    font-size: 3.2rem;
+}
+
+.weather-title {
+    padding: 0;
+    margin: 0px;
+    border-radius: 12px;
+    background-image: url(../../../assets/weather/cloudSunny.jpeg);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+.blur {
+    backdrop-filter: blur(3px);
+    border-radius: 12px;
+}
+
+.bg-text{
+    z-index: 9999;
+}
+
+fa-icon {
+    font-size: 2rem;
+}

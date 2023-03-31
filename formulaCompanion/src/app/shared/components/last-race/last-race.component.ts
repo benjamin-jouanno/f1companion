@@ -135,4 +135,8 @@ export class LastRaceComponent implements OnInit {
     return valueofCtry
   }
 
+  raceDetails(id: string, cid: string) {
+    this.router.navigateByUrl('/Race/' + id + '/' + cid);
+  }
+
 }

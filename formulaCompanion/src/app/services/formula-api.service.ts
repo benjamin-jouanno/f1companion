@@ -91,4 +91,7 @@ export class FormulaApiService {
   public getConstructorInfos(constructor: string): Observable<any> {
     return this.httpClient.get<any>(apiEnv.apiUrl + 'constructors/' + constructor + '/drivers' + apiEnv.returnFormat + '?limit=1000')
   }
+  public getRaceResult(season:string, circuit: string): Observable<any> {
+    return this.httpClient.get<any>(apiEnv.apiUrl + season + '/' + circuit + '/results' + apiEnv.returnFormat);
+  }
 }
