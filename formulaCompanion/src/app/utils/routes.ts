@@ -8,10 +8,10 @@ import { WelcomePageComponent } from "../pages/welcome-page/welcome-page.compone
 import { IsupGuard } from "./isUp-guard";
 
 export const routesUrls: Routes = [
-    { path: 'Driver/:id', component: DriverPageComponent, canActivate: [IsupGuard] },
+    { path: 'Driver/:id', component: DriverPageComponent },
     { path: 'ko', component: DownPageComponent },
-    { path: 'Constructors', component: ConstructorPageComponent,  canActivate: [IsupGuard]  },
-    { path: 'Dashboard', component: DashboardComponent,  canActivate: [IsupGuard]  },
-    { path: 'Race/:id/:cid', component: RacePageComponent,  canActivate: [IsupGuard]  },
-    { path: '**', component: WelcomePageComponent,  canActivate: [IsupGuard]  },
+    { path: 'Constructors', component: ConstructorPageComponent,  },
+    { path: 'Dashboard', component: DashboardComponent,  },
+    { path: 'Race/:id/:cid', component: RacePageComponent  },
+    { path: '**', component: WelcomePageComponent  },
 ]
